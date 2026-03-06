@@ -1,4 +1,4 @@
-from backend.clients.book_client import BooksClient
+from clients.book_client import BooksClient
 
 
 def test_get_books():
