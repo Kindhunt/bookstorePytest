@@ -1,8 +1,8 @@
 import pytest
 
-from clients.fake_store_client import BooksClient
+from clients.fake_store_client import FakeStoreClient
 
 
 @pytest.fixture
-def books_client():
-    return BooksClient()
+def fake_store_client():
+    return FakeStoreClient()

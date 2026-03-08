@@ -1,6 +1,4 @@
 pytest
-playwright
-pytest-playwright
 pydantic
 requests
 allure-pytest

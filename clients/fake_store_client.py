@@ -6,7 +6,7 @@ from requests import Response
 from models.Cart import Cart, CartCreate
 from models.Login import Login, JWTAuth
 from models.Product import ProductCreate, Product
-from models.User import User, UserCreate
+from models.User import User, UserCreate, UserId
 
 
 class FakeStoreClient:
@@ -66,9 +66,9 @@ class FakeStoreClient:
         response = self.session.get(f"{self.BASE_URL}/users")
         return response, self._parse_list(response, User)
 
-    def add_new_user(self, user: UserCreate) -> Tuple[Response, User]:
+    def add_new_user(self, user: UserCreate) -> Tuple[Response, UserId]:
         response = self.session.post(f"{self.BASE_URL}/users", json=user.model_dump())
-        return response, self._parse_model(response, User)
+        return response, self._parse_model(response, UserId)
 
     def get_user(self, user_id: int) -> Tuple[Response, User]:
         response = self.session.get(f"{self.BASE_URL}/users/{user_id}")

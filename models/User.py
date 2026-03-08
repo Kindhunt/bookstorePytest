@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -8,7 +10,10 @@ class UserCreate(BaseModel):
 
 
 class User(BaseModel):
-    id: int
+    id: Optional[int] = None
     username: str
     email: str
     password: str
+
+class UserId(BaseModel):
+    id: int

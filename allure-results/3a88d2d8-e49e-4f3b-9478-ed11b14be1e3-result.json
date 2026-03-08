@@ -1,0 +1,1 @@
+{"name": "Проверить, добавлена ли корзина", "status": "passed", "start": 1773000789809, "stop": 1773000810683, "uuid": "cf541abd-b6df-4f09-a636-8b420cccac2a", "testCaseId": "2c846e137d9d33ddb66ff449653f5cad", "fullName": "tests.test_client_store#test_add_cart", "titlePath": ["tests", "test_client_store.py"]}
