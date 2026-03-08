@@ -1,6 +1,6 @@
 import pytest
 
-from clients.book_client import BooksClient
+from clients.fake_store_client import BooksClient
 
 
 @pytest.fixture

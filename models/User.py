@@ -1,10 +1,14 @@
 from pydantic import BaseModel
-from typing import List
 
-from models.Book import Book
+
+class UserCreate(BaseModel):
+    username: str
+    email: str
+    password: str
 
 
 class User(BaseModel):
+    id: int
     username: str
+    email: str
     password: str
-    books: List[Book]
